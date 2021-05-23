@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import TableContents from 'components/organisms/TableContents'
 import { TableCell } from '@material-ui/core'
 import { arr } from 'utils/constant/top'
+import { media } from 'utils/styled/media'
 
 const StyledTableCell = styled(TableCell)`
   font-size: 1.2em;
@@ -22,6 +23,9 @@ const StyledTableBody = styled(TableBody)`
 const StyledTableContainer = styled(TableContainer)`
   max-height: 70vh;
   border-radius: 6px;
+  ${media.phone`
+  max-height: 60vh;  
+      `}
 `
 
 const AppTable = () => {
@@ -35,7 +39,7 @@ const AppTable = () => {
   // }
   return (
     <StyledTableContainer>
-      <Table stickyHeader aria-label="sticky table">
+      <Table stickyHeader aria-label="sticky table" size="small">
         <TableHead>
           <TableRow>
             {['西暦', '和暦', 'memo'].map((value) => (

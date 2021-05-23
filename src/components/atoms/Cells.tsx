@@ -20,7 +20,7 @@ const StyledTableCell = styled(TableCell)<{
       ? props.theme.palette.common.white
       : props.theme.palette.common.black};
   ${media.phone`
-  font-size: 0.9em;
+  font-size: 0.em;
       `}
 `
 const Cell = (value: string, isSelected: Props['isSelected']) => {
