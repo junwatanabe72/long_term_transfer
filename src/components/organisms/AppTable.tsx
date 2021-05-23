@@ -12,7 +12,7 @@ import { TableCell } from '@material-ui/core'
 import { arr } from 'utils/constant/top'
 
 const StyledTableCell = styled(TableCell)`
-  font-size: 1.3em;
+  font-size: 1.2em;
   max-width: 33vw;
   background-color: ${(props) => props.theme.palette.grey[200]};
 `
@@ -46,10 +46,10 @@ const AppTable = () => {
           </TableRow>
         </TableHead>
         <StyledTableBody>
-          {arr.map((row) => (
+          {arr.map((year) => (
             <TableContents
-              key={row}
-              year={row}
+              key={year}
+              year={year}
               state={acquisitionYear}
               onClick={handleChange}
             />

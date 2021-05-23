@@ -2,6 +2,7 @@ import React from 'react'
 import { TableCell } from '@material-ui/core'
 import styled from 'styled-components'
 import { firstR, lastH, wareki, yearChar } from 'utils/constant/top'
+import { media } from 'utils/styled/media'
 
 interface Props {
   num: number
@@ -14,12 +15,15 @@ const StyledTableCell = styled(TableCell)<{
 }>`
   font-size: 1em;
   max-width: 33vw;
-  color: ${(props) =>
-    props.isSelected
+  color: ${({ isSelected, ...props }) =>
+    isSelected
       ? props.theme.palette.common.white
       : props.theme.palette.common.black};
+  ${media.phone`
+  font-size: 0.9em;
+      `}
 `
-const Cell = (value: string, isSelected: boolean) => {
+const Cell = (value: string, isSelected: Props['isSelected']) => {
   return (
     <StyledTableCell component="th" align="center" isSelected={isSelected}>
       {value}
@@ -35,6 +39,7 @@ const Cells: React.FC<Props> = ({ num, value = '', isSelected = false }) => {
       {Cell(
         `${warekiYear}
         ${warekiYear === lastH ? `(${firstR})` : ''}`,
+
         isSelected,
       )}
       {Cell(value, isSelected)}

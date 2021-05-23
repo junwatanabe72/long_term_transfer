@@ -46,6 +46,13 @@ const Head: React.FC = () => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <script type="text/javascript">
+          rakuten_affiliateId="0ea62065.34400275.0ea62066.204f04c0";rakuten_items="ranking";rakuten_genreId="111427";rakuten_recommend="on";rakuten_design="slide";rakuten_size="600x200";rakuten_target="_blank";rakuten_border="on";rakuten_auto_mode="on";rakuten_adNetworkId="a8Net";rakuten_adNetworkUrl="https%3A%2F%2Frpx.a8.net%2Fsvt%2Fejp%3Fa8mat%3D3HC8BL%2BAHGV2Y%2B2HOM%2BBS629%26rakuten%3Dy%26a8ejpredirect%3D";rakuten_pointbackId="a21052298708_3HC8BL_AHGV2Y_2HOM_BS629";rakuten_mediaId="20011815";
+        </script>
+        <script
+          type="text/javascript"
+          src="//xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js"
+        ></script>
       </Helmet>
     </div>
   )

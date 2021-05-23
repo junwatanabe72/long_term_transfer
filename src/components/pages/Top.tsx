@@ -15,6 +15,12 @@ const TopPage: React.FC = () => {
         <HowTo />
       </Box>
       <AppTable />
+      <img
+        width="1"
+        height="1"
+        src="https://www16.a8.net/0.gif?a8mat=3HC8BL+AHGV2Y+2HOM+BS629"
+        alt=""
+      ></img>
     </Container>
   )
 }
