@@ -12,6 +12,7 @@ export const overTerm = '10年超'
 
 const date = new Date()
 const defaultYear = date.getFullYear()
+
 function* range(start: number, end: number) {
   for (let i = start; i < end; i++) {
     yield i
@@ -29,7 +30,7 @@ export const wareki = (num: number) => {
   const full = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', options).format(
     date,
   )
-  const sp = full.split(yearChar)
+  const sp = full.split(/年|\//)
   return `${sp[0]}${yearChar}`
 }
 
