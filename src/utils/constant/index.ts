@@ -47,4 +47,4 @@ export const imagePath = ''
 export const howToText = '使い方は簡単！'
 export const howToText2 = ['不動産取得年を', 'するだけ！']
 
-export const ninjaID = 'a7db215647619e3169d4a8744501484c'
+export const ninjaID = '775269bed10e865976ced4b3e97329ca'
