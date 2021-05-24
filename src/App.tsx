@@ -4,7 +4,7 @@ import Top from 'components/pages/Top'
 
 const ReactApp = styled.div`
   text-align: center;
-  height: 100vh;
+  // height: 100vh;
 `
 const App: React.FC = () => {
   return (

@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow'
 import styled from 'styled-components'
 import TableContents from 'components/organisms/TableContents'
 import { TableCell } from '@material-ui/core'
-import { arr } from 'utils/constant/top'
+import { arr, tableHeads } from 'utils/constant'
 import { media } from 'utils/styled/media'
 
 const StyledTableCell = styled(TableCell)`
@@ -28,7 +28,7 @@ const StyledTableContainer = styled(TableContainer)`
       `}
 `
 
-const AppTable = () => {
+const AppTable: React.FC = () => {
   const [acquisitionYear, setAcquisitionYear] = React.useState<number>(0)
 
   const handleChange = (num: number) => {
@@ -42,7 +42,7 @@ const AppTable = () => {
       <Table stickyHeader aria-label="sticky table" size="small">
         <TableHead>
           <TableRow>
-            {['西暦', '和暦', 'memo'].map((value) => (
+            {tableHeads.map((value) => (
               <StyledTableCell key={value} align="center" variant="head">
                 {value}
               </StyledTableCell>

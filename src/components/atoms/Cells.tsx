@@ -1,7 +1,7 @@
 import React from 'react'
 import { TableCell } from '@material-ui/core'
 import styled from 'styled-components'
-import { firstR, lastH, wareki, yearChar } from 'utils/constant/top'
+import { firstR, lastH, wareki, yearChar } from 'utils/constant'
 import { media } from 'utils/styled/media'
 
 interface Props {

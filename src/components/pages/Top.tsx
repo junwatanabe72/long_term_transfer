@@ -1,7 +1,7 @@
 import 'date-fns'
 import { Box } from '@material-ui/core'
 import { Container } from '@material-ui/core'
-import { appTitle } from 'utils/constant/top'
+import { appTitle } from 'utils/constant'
 import HowTo from 'components/organisms/HowTo'
 import AppTable from 'components/organisms/AppTable'
 // import Ad from '../atoms/Ad'

@@ -9,7 +9,7 @@ import {
   overTerm,
   overTermYears,
   shortTerm,
-} from 'utils/constant/top'
+} from 'utils/constant'
 
 interface Props {
   year: number

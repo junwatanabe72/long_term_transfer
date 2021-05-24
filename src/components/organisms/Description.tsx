@@ -1,4 +1,4 @@
-const Description = () => {
+const Description: React.FC = () => {
   return (
     <>
       <div>不動産売却時、所有期間はすごく大事な要素です！</div>

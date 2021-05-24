@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { appTitle, description, imagePath, url } from 'utils/constant/top'
+import { appTitle, description, imagePath, url } from 'utils/constant'
 
 const Head: React.FC = () => {
   return (

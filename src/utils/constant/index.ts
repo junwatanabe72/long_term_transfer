@@ -7,7 +7,7 @@ export const acYear = '取得年'
 export const shortTerm = '短期譲渡'
 export const longTerm = '長期譲渡'
 export const overTerm = '10年超'
-
+export const tableHeads = ['西暦', '和暦', 'memo']
 // date
 
 const date = new Date()
@@ -42,3 +42,7 @@ export const description =
   '不動産売却時に長期譲渡所得と見做されるか、不動産の所有期間を判別するアプリケーションです！'
 export const url = 'https://real-estate-holding-period-checker.work/'
 export const imagePath = ''
+
+// howto
+export const howToText = '使い方は簡単！'
+export const howToText2 = ['不動産取得年を', 'するだけ！']
