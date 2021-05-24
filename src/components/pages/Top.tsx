@@ -1,9 +1,10 @@
 import 'date-fns'
 import { Box } from '@material-ui/core'
 import { Container } from '@material-ui/core'
-import { appTitle } from 'utils/constant'
+import { appTitle, ninjaID } from 'utils/constant'
 import HowTo from 'components/organisms/HowTo'
 import AppTable from 'components/organisms/AppTable'
+import AdmaxSwitch from 'components/atoms/Ninja'
 // import Ad from '../atoms/Ad'
 
 const TopPage: React.FC = () => {
@@ -16,6 +17,7 @@ const TopPage: React.FC = () => {
         <HowTo />
       </Box>
       <AppTable />
+      <AdmaxSwitch id={ninjaID} />
       {/* <Ad /> */}
     </Container>
   )
