@@ -2,9 +2,9 @@ import 'date-fns'
 import styled from 'styled-components'
 import { Box } from '@material-ui/core'
 import { appTitle, ninjaID } from 'utils/constant'
-import HowTo from 'components/organisms/HowTo'
-import AppTable from 'components/organisms/AppTable'
-import AdmaxSwitch from 'components/atoms/Ninja'
+import HowTo from 'components/organisms/top/HowTo'
+import AppTable from 'components/organisms/top/AppTable'
+import AdmaxSwitch from 'components/templetes/Ninja'
 
 const StyledContainer = styled.div`
   display: flex;

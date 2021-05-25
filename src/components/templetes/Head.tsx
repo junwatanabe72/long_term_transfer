@@ -24,22 +24,6 @@ const Head: React.FC = () => {
           <meta name="twitter:image" content={imagePath} />
           <link rel="canonical" href={url} />
           <link
-            rel="icon"
-            href={'/static/head/smallSheep.png'}
-            sizes="16x16"
-            type="image/png"
-          />
-          <link
-            rel="icon"
-            href={'/static/head/midSheep.png'}
-            sizes="32x32"
-            type="image/png"
-          />
-          <link
-            rel="apple-touch-icon"
-            href={'/static/head/apple-touch-icon.png'}
-          />
-          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
