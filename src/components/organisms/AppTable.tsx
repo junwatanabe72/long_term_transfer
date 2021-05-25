@@ -5,7 +5,6 @@ import TableBody from '@material-ui/core/TableBody'
 import TableContainer from '@material-ui/core/TableContainer'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
-// import Paper from '@material-ui/core/Paper'
 import styled from 'styled-components'
 import TableContents from 'components/organisms/TableContents'
 import { TableCell } from '@material-ui/core'
@@ -22,9 +21,15 @@ const StyledTableBody = styled(TableBody)`
 `
 const StyledTableContainer = styled(TableContainer)`
   max-height: 70vh;
+  max-width: 50vw;
   border-radius: 6px;
+  ${media.tablet`
+  max-height: 60vh;  
+  max-width: 70vw;
+      `}
   ${media.phone`
   max-height: 60vh;  
+  max-width: 90vw;
       `}
 `
 

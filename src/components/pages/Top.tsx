@@ -1,15 +1,22 @@
 import 'date-fns'
+import styled from 'styled-components'
 import { Box } from '@material-ui/core'
-import { Container } from '@material-ui/core'
 import { appTitle, ninjaID } from 'utils/constant'
 import HowTo from 'components/organisms/HowTo'
 import AppTable from 'components/organisms/AppTable'
 import AdmaxSwitch from 'components/atoms/Ninja'
-// import Ad from '../atoms/Ad'
+
+const StyledContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+`
 
 const TopPage: React.FC = () => {
   return (
-    <Container maxWidth="sm">
+    <StyledContainer>
       <Box pt={3}>
         <h1>{appTitle}</h1>
       </Box>
@@ -17,9 +24,10 @@ const TopPage: React.FC = () => {
         <HowTo />
       </Box>
       <AppTable />
-      <AdmaxSwitch id={ninjaID} />
-      {/* <Ad /> */}
-    </Container>
+      <Box mt={1}>
+        <AdmaxSwitch id={ninjaID} />
+      </Box>
+    </StyledContainer>
   )
 }
 export default TopPage
