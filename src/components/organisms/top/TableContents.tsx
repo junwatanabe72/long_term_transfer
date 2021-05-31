@@ -29,92 +29,50 @@ const LongTermRow = styled(TableRow)`
 const OverTermRow = styled(TableRow)`
   background-color: ${(props) => props.theme.palette.success.main};
 `
-
-const createYearCell = (
-  num: number,
-  state: number,
-  onClick: (num: number) => void,
-) => {
+const TARGET = 'target'
+type RowTypes = typeof TARGET | 'plain' | 'shortTerm' | 'longTerm' | 'overTerm'
+const getType = (state: number, num: number): RowTypes => {
   const longTermPeriod = state + longTermYears
   const overTenTimes = longTermPeriod + overTermYears
-  if (state === 0) {
-    return (
-      <TableRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} />
-      </TableRow>
-    )
-  }
-  if (state > num) {
-    return (
-      <TableRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} />
-      </TableRow>
-    )
-  }
   if (state === num) {
-    return (
-      <TargetRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} value={acYear} isSelected={true} />
-      </TargetRow>
-    )
+    return TARGET
   }
-  if (state < num && num < longTermPeriod) {
-    return (
-      <ShortTermRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} value={shortTerm} />
-      </ShortTermRow>
-    )
+  if (state === 0 || num < state) {
+    return 'plain'
   }
-  if (num >= longTermPeriod && num < overTenTimes) {
-    return (
-      <LongTermRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} value={longTerm} />
-      </LongTermRow>
-    )
+  if (num < longTermPeriod) {
+    return 'shortTerm'
   }
-  if (num >= overTenTimes) {
-    return (
-      <OverTermRow
-        onClick={() => {
-          onClick(num)
-        }}
-      >
-        <Cells num={num} value={overTerm} />
-      </OverTermRow>
-    )
+  if (num < overTenTimes) {
+    return 'longTerm'
   }
-  return (
-    <TableRow
-      onClick={() => {
-        onClick(num)
-      }}
-    >
-      <Cells num={num} />
-    </TableRow>
-  )
+  return 'overTerm'
+}
+const values = {
+  target: acYear,
+  plain: '',
+  shortTerm,
+  longTerm,
+  overTerm,
+}
+const components = {
+  target: TargetRow,
+  plain: TableRow,
+  shortTerm: ShortTermRow,
+  longTerm: LongTermRow,
+  overTerm: OverTermRow,
 }
 
 const TableContents: React.FC<Props> = ({ year, state, onClick }) => {
-  return createYearCell(year, state, onClick)
+  const _onClick = () => onClick(year)
+  const type = getType(state, year)
+  const isSelected = type === TARGET
+  const value = values[type as RowTypes]
+  const Component = components[type as RowTypes]
+  return (
+    <Component onClick={_onClick}>
+      <Cells num={year} value={value} isSelected={isSelected} />
+    </Component>
+  )
 }
 export default TableContents
