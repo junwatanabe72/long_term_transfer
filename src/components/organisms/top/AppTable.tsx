@@ -28,7 +28,7 @@ const StyledTableContainer = styled(TableContainer)`
   max-width: 70vw;
       `}
   ${media.phone`
-  max-height: 55vh;  
+  max-height: 53vh;  
   max-width: 90vw;
       `}
 `
