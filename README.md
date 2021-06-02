@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+## 不動産所有期間チェッカー
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+不動産の所有期間を確認するアプリです。  
+不動産を売却した際、所有期間によって税率が異なります。  
+所有期間の考え方がややこしいので、直感的にわかりやすく判定してくれるツールがほしいなと  
+長年、考えていたので自分で作成しました笑  
+取得した年をタップするだけの簡単設計となっています。
 
-In the project directory, you can run:
+[トップ画面](https://golfersfarm.com/users/3)<img width="816" alt="スクリーンショット 2021-06-02 17 35 09" src="https://user-images.githubusercontent.com/79444103/120449509-6cbbf700-c3ca-11eb-841f-eadb3977a84f.png">
 
-### `yarn start`
+## アプリの概要
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 名称： 不動産所有期間チェッカー
+- site： https://real-estate-holding-period-checker.work/
+- 目的：
+  不動産の所有期間を判定したい。
 
-### `yarn test`
+## 使用した技術
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+フロントエンド
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react
+- material-ui
+- typescript
+- eslint + prettier
+- styled-components
+- jest
+- netlify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 起動方法
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git clone ~~~
+cd ~~~
+yarn
+yarn start
+```
