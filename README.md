@@ -7,8 +7,8 @@
 所有期間の考え方がややこしいので、直感的にわかりやすく判定してくれるツールがほしいなと  
 長年、考えていたので自分で作成しました笑  
 取得した年をタップするだけの簡単設計となっています。
-
-[トップ画面](https://golfersfarm.com/users/3)<img width="816" alt="スクリーンショット 2021-06-02 17 35 09" src="https://user-images.githubusercontent.com/79444103/120449509-6cbbf700-c3ca-11eb-841f-eadb3977a84f.png">
+ 
+<img width="816" alt="スクリーンショット 2021-06-02 17 35 09" src="https://user-images.githubusercontent.com/79444103/120449509-6cbbf700-c3ca-11eb-841f-eadb3977a84f.png">
 
 ## アプリの概要
 
