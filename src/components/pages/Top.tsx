@@ -1,4 +1,5 @@
 import 'date-fns'
+import React from 'react'
 import styled from 'styled-components'
 import { Box } from '@material-ui/core'
 import { appTitle, ninjaID } from 'utils/constant'
@@ -24,7 +25,7 @@ const TopPage: React.FC = () => {
         <HowTo />
       </Box>
       <AppTable />
-      <Box mt={1}>
+      <Box mt={2}>
         <AdmaxSwitch id={ninjaID} />
       </Box>
     </StyledContainer>
