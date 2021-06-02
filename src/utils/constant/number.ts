@@ -53,4 +53,4 @@ export const FONTWEIGHT = {
   TINY: 200,
 } as const
 
-export const BORDERRADIUS = 4 as 4
+export const BORDERRADIUS = 4

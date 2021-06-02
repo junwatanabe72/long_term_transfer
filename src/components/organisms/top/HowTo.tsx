@@ -1,3 +1,4 @@
+import React from 'react'
 import TouchAppIcon from '@material-ui/icons/TouchApp'
 import { howToText, howToText2 } from 'utils/constant'
 

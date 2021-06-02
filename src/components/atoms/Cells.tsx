@@ -10,39 +10,45 @@ interface Props {
   value?: string
 }
 
-const StyledTableCell = styled(TableCell)<{
-  isSelected: Props['isSelected']
-}>`
+const StyledTableCell = styled(TableCell)`
   font-size: 1em;
   max-width: 33vw;
-  color: ${({ isSelected, ...props }) =>
-    isSelected
-      ? props.theme.palette.common.white
-      : props.theme.palette.common.black};
+  color: ${(props) => props.theme.palette.common.white};
   ${media.phone`
   font-size: 0.em;
       `}
 `
+
+const ExtendedStyledTableCell = styled(StyledTableCell)`
+  color: ${(props) => props.theme.palette.common.black};
+`
+
 const Cell = (value: string, isSelected: Props['isSelected']) => {
   return (
-    <StyledTableCell component="th" align="center" isSelected={isSelected}>
-      {value}
-    </StyledTableCell>
+    <>
+      {isSelected ? (
+        <StyledTableCell component="th" align="center">
+          {value}
+        </StyledTableCell>
+      ) : (
+        <ExtendedStyledTableCell component="th" align="center">
+          {value}
+        </ExtendedStyledTableCell>
+      )}
+    </>
   )
 }
 
 const Cells: React.FC<Props> = ({ num, value = '', isSelected = false }) => {
   const warekiYear = wareki(num)
+  const seirekiText = `${num}${yearChar}`
+  const warekiText = `${warekiYear}${warekiYear === lastH ? `(${firstR})` : ''}`
+  const other = value
   return (
     <>
-      {Cell(`${num}${yearChar}`, isSelected)}
-      {Cell(
-        `${warekiYear}
-        ${warekiYear === lastH ? `(${firstR})` : ''}`,
-
-        isSelected,
-      )}
-      {Cell(value, isSelected)}
+      {Cell(seirekiText, isSelected)}
+      {Cell(warekiText, isSelected)}
+      {Cell(other, isSelected)}
     </>
   )
 }
