@@ -24,8 +24,9 @@ export const years = [
 ]
 
 // exchange wareki
-const options = { era: 'short' as 'short' }
-export const wareki = (num: number) => {
+const short = 'short'
+const options = { era: short as typeof short }
+export const wareki = (num: number): string => {
   const date = new Date(num.toString())
   const full = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', options).format(
     date,

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 // 広告タイプの型
 type AdmaxAdType = {
@@ -7,7 +7,9 @@ type AdmaxAdType = {
 }
 declare global {
   interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     admaxads: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     __admax_tag__: any
   }
 }

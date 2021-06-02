@@ -17,7 +17,8 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   `
 
   return acc
-}, {} as { [index: string]: Function })
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+}, {} as { [index: string]: any })
 
 // export const media = {
 //   handheld1279: (first: TemplateStringsArray | CSSObject, ...args: SimpleInterpolation[]) => css`
