@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "不動産所有期間チェッカー",
+  "name": "不動産所有期間チェッカー",
   "icons": [
     {
       "src": "favicon.ico",
