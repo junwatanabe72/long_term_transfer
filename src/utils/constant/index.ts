@@ -41,7 +41,7 @@ export const overTermYears = 5
 
 // head
 export const description =
-  '不動産売却時に長期譲渡所得と見做されるか、不動産の所有期間を判別するアプリケーションです！'
+  '不動産売却時に長期譲渡所得となるか短期譲渡所得となるか、わかりづらいですよね？このアプリはそんな方々のために「react」で作られた簡単に不動産の所有期間を判別できるアプリケーションです！'
 export const url = 'https://real-estate-holding-period-checker.work/'
 export const imagePath = '../../../public/logo192.png'
 
